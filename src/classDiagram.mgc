@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="HashTable" x="244" y="247">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="WordNode"
+            endpointName="hashArray" kind="Simple"/>
+        <Communication destinationClassName="WordNode"/>
+        <Communication destinationClassName="TextNode"/>
+        <Communication destinationClassName="TextList"/>
+        <Communication destinationClassName="WordList"/>
+    </Class>
+    <Class name="WordNode" x="604" y="381">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="TextList"
+            endpointName="txtlist" kind="Simple"/>
+        <Association destinationClassName="WordNode"
+            endpointName="next_node" kind="Simple"/>
+        <Association destinationClassName="WordList"
+            endpointName="connected_list" kind="Simple"/>
+        <Communication destinationClassName="WordList"/>
+        <Communication destinationClassName="TextList"/>
+    </Class>
+    <Class name="OpenAdressing.Probing" x="120" y="489">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Ranking.Sort" x="1062" y="218">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="TextNode" x="875" y="522">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="TextNode"
+            endpointName="nextNode" kind="Simple"/>
+    </Class>
+    <Class name="Sorting" x="793" y="207">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="TextNode"/>
+    </Class>
+    <Class name="TextList" x="642" y="522">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="TextNode" endpointName="head" kind="Simple"/>
+        <Communication destinationClassName="TextNode"/>
+    </Class>
+    <Class name="WordList" x="536" y="242">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="WordNode" endpointName="head" kind="Simple"/>
+        <Communication destinationClassName="WordNode"/>
+    </Class>
+    <Class name="OpenAdressing" x="299" y="420">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="OANode"
+            endpointName="table[]" kind="Simple"/>
+        <Association destinationClassName="OpenAdressing.Probing"
+            endpointName="probing" kind="Simple"/>
+        <Communication destinationClassName="OANode"/>
+    </Class>
+    <Class name="OANode" x="546" y="544">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="TextList"
+            endpointName="textList" kind="Simple"/>
+        <Communication destinationClassName="TextList"/>
+    </Class>
+    <Class name="Ranking" x="909" y="23">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Sorting"
+            endpointName="sorter" kind="Simple"/>
+        <Association destinationClassName="Ranking.Sort"
+            endpointName="sortType" kind="Simple"/>
+        <Communication destinationClassName="TextNode"/>
+        <Communication destinationClassName="Sorting"/>
+        <Communication destinationClassName="TextList"/>
+    </Class>
+    <Class name="FileOperation" x="380" y="33">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="OpenAdressing"
+            endpointName="oa" kind="Simple"/>
+        <Association destinationClassName="HashTable"
+            endpointName="chainedHashTable" kind="Simple"/>
+        <Communication destinationClassName="OpenAdressing"/>
+        <Communication destinationClassName="HashTable"/>
+        <Communication destinationClassName="TextNode"/>
+        <Communication destinationClassName="TextList"/>
+    </Class>
+    <Class name="SearchGUI" x="-15" y="0">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="FileOperation"
+            endpointName="fileOperationChaining" kind="Simple"/>
+        <Association destinationClassName="FileOperation"
+            endpointName="fileOperationQuadratic" kind="Simple"/>
+        <Association destinationClassName="FileOperation"
+            endpointName="fileOperationLinear" kind="Simple"/>
+        <Association destinationClassName="FileOperation"
+            endpointName="fileOperationDouble" kind="Simple"/>
+        <Communication destinationClassName="OpenAdressing"/>
+        <Communication destinationClassName="HashTable"/>
+        <Communication destinationClassName="Ranking"/>
+        <Communication destinationClassName="FileOperation"/>
+    </Class>
+</ClassDiagram>
